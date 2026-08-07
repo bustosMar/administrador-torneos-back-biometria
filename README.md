@@ -1,1 +1,0 @@
-# administrador-torneos-back-biometria
