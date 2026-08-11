@@ -1,0 +1,8 @@
+server:
+  port: 9090
+  
+biometria:
+  capture:
+    jar: "C:/SistemaTorneos/biometria/biometria-capture-jar-with-dependencies.jar"
+  sdk:
+    path: "C:/Windows/System32"
