@@ -13,8 +13,7 @@ import com.sistema.torneos.biometria.app.service.HuellaService;
 
 @RestController
 @RequestMapping("/api/huellas")
-@CrossOrigin(origins = {"http://localhost:4200",
-"https://encounter-legislature-surgery-technical.trycloudflare.com"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class HuellaController {
 
 	@Autowired
