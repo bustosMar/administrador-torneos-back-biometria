@@ -9,6 +9,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
+    private final WebCorsConfig webCorsConfig;
+
+    public SecurityConfig(WebCorsConfig webCorsConfig) {
+        this.webCorsConfig = webCorsConfig;
+    }
+
     @Bean
     public SecurityFilterChain securityFilterChain(
             HttpSecurity http
@@ -17,7 +23,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
 
-            .cors(cors -> {})
+            .cors(cors -> cors.configurationSource(webCorsConfig))
 
             .sessionManagement(session ->
                 session.sessionCreationPolicy(
